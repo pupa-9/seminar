@@ -1,41 +1,30 @@
-﻿// Задача 19 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-
-// Задача 17. Напишите программу, которая принимает на вход
-//координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и выдаёт
-//номер четверти плоскости, в которой находится эта
-//точка.
-void Zadacha17()
-{
-    Random random = new Random();
-    int x = random.Next(-10,11);
-    int y = random.Next(-10,11);
-    Console.WriteLine($"точка с координатами ({x}, {y})");
-    if (x > 0 && y > 0) Console.WriteLine("1 четверть");
-    else if (x < 0 && y > 0) Console.WriteLine("2 четверть");
-    else if (x < 0 && y < 0) Console.WriteLine("3 четверть");
-    else if (x > 0 && y < 0) Console.WriteLine("4 четверть");
-    else Console.WriteLine("Точка лежит на оси координат");
-}
-//Zadacha17();
-/*
-Console.WriteLine("Введите пятизначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number < 1000 && number > 99)
-{
-    Console.WriteLine("Вторая цифра числа: " + (number % 100 / 10));
-}
-else
-{
-    Console.WriteLine("Введено не пятизначное число");
-}
-*/
-
-void Zadacha19()
+﻿void Zadacha19()
 //Задача 19: Напишите программу, которая принимает на
 //вход пятизначное число и проверяет, является ли оно
 //палиндромом.
 {
-    Console.WriteLine("Задачка");
+    Console.Write("Введите пятизначное число: ");
+    int number = Convert.ToInt32(Console.ReadLine());
+    if (number > 9999 && number < 100000)
+    {
+        int a = number % 10;
+        int b = number / 10000; 
+        int c = number % 100 / 10;
+        int d = number / 1000 % 10;
+        if (a == b && c == d)
+        {
+            Console.WriteLine("Это число является палиндромом");
+        }
+        else 
+        {
+            Console.WriteLine("Это число не является палиндромом");
+        }
+        
+    }
+    else
+    {
+        Console.WriteLine("Введено не пятизначное число");
+    }
 }
 //Zadacha19();
 
@@ -84,7 +73,7 @@ void Zadacha23()
     }
     else while  (count <= number)
     {
-        Console.WriteLine($"{count} => " + Math.Pow(count,3));
+        Console.WriteLine($"{count}^3 = " + Math.Pow(count,3));
         count++;
     }
     
@@ -95,4 +84,3 @@ void Zadacha23()
     */
 }
 //Zadacha23();
-
