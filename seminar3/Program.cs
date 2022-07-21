@@ -30,6 +30,14 @@ else
 }
 */
 
+void Zadacha19()
+//Задача 19: Напишите программу, которая принимает на
+//вход пятизначное число и проверяет, является ли оно
+//палиндромом.
+{
+    Console.WriteLine("Задачка");
+}
+//Zadacha19();
 
 void Zadacha21()
 // Задача 21: Напишите программу, которая принимает на
@@ -62,4 +70,29 @@ void Zadacha21()
 }
 //Zadacha21();
 
+// Задача 23: Напишите программу, которая принимает на
+//вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+void Zadacha23()
+{
+    Console.Write("Введите число: ");
+    int number = Convert.ToInt32(Console.ReadLine());
+    int count = 1;
+    if (count > number)
+    {
+        Console.WriteLine($"Вы ввели число {number}, которое меньше 1");
+    }
+    else while  (count <= number)
+    {
+        Console.WriteLine($"{count} => " + Math.Pow(count,3));
+        count++;
+    }
+    
+    /*else
+    {
+        Console.WriteLine($"Вы ввели число {number}, которое меньше 1");
+    }
+    */
+}
+//Zadacha23();
 
