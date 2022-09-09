@@ -18,6 +18,38 @@ void Zadacha64()
     }
 }
 
+
+//Рекурсия
+void Zadacha64(int M, int N)
+{
+    if (M == N + 1) return;
+    
+    while(M % 3 == 1|| M % 3 == 2) M++;
+
+    for (int i = 0; i <= N; i += 3)
+    {
+        Console.Write($" {i + M}");
+    }
+
+    Console.WriteLine(M);
+    M++;
+    Zadacha65(M, N);
+}
+
+//Zadacha64(0, 10);
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Задача 66: Задайте значения M и N. Напишите рекурсионный метод, 
 //который найдёт сумму натуральных элементов в промежутке от M до N.
 
