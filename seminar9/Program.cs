@@ -33,7 +33,7 @@ void Zadacha64(int M, int N)
 
     Console.WriteLine(M);
     M++;
-    Zadacha65(M, N);
+    Zadacha64(M, N);
 }
 
 //Zadacha64(0, 10);
